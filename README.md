@@ -7,14 +7,23 @@
 Ausgaben teilen. Putzplan rotieren. Einkaufsliste teilen. Pinnwand für alle.
 **In Deutschland gehostet. Ohne Tracking. Ohne Werbung. Ohne Investor.**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-nava.app-84e1bc?style=for-the-badge)](https://nava.app)
-[![License: PolyForm Noncommercial](https://img.shields.io/badge/License-PolyForm%20Noncommercial-c44536?style=for-the-badge)](./LICENSE)
-[![Made with Next.js](https://img.shields.io/badge/Next.js-15-000?style=for-the-badge&logo=next.js)](https://nextjs.org)
-[![DSGVO konform](https://img.shields.io/badge/DSGVO-konform-3d5a3d?style=for-the-badge)](#datenschutz)
+[![Live App](https://img.shields.io/badge/Live%20App-nava.app-84e1bc?style=for-the-badge)](https://nava.app)
+[![License: Source-available](https://img.shields.io/badge/License-Source--available-c44536?style=for-the-badge)](./LICENSE)
+[![Status](https://img.shields.io/badge/Status-v1.0%20Live-3d5a3d?style=for-the-badge)](https://nava.app)
+[![DSGVO konform](https://img.shields.io/badge/DSGVO-konform-8b5cf6?style=for-the-badge)](https://nava.app/datenschutz)
 
 ![Nava — Die WG-App](./docs/screenshots/hero.png)
 
+[**→ App ausprobieren**](https://nava.app) · [**Issues melden**](https://github.com/Abuarchiv/nava/issues) · [**Discussions**](https://github.com/Abuarchiv/nava/discussions)
+
 </div>
+
+---
+
+> **Hinweis zu diesem Repository.**
+> Dies ist das öffentliche Marketing-Repo von nava. Der Quellcode der Anwendung
+> ist nicht öffentlich einsehbar — er liegt in einem privaten Repository.
+> Diese Seite dient als Schaufenster, Issue-Tracker und Diskussionsraum.
 
 ---
 
@@ -42,77 +51,53 @@ Die meisten Alternativen bringen Probleme mit:
 
 Nava ist anders:
 
-- **Server in Frankfurt** — DSGVO-konform, daten löschbar (echt, nicht „inaktiv für 18 Monate")
+- **Server in Frankfurt** — DSGVO-konform, Daten löschbar (echt, nicht „inaktiv für 18 Monate")
 - **Kein Tracking, keine Werbung, kein Investor** — wir verkaufen weder eure Daten noch euch
 - **Keine Limits** — vier, acht, zwölf Mitbewohner sind egal
-- **Quellcode prüfbar** — du kannst nachsehen, was wir mit deinen Daten tun
+- **Vier Studenten, ein Server** — wir bauen das in unseren eigenen WGs, ohne Wachstumsdruck
 
 ---
 
-## Tech-Stack
+## Lizenz: Source-available, **nicht** Open Source
 
-- **Next.js 15** (App Router, Server Components)
-- **React 19** mit React Three Fiber für die 3D-Hero-Szene
-- **Supabase** (Postgres + Auth + Realtime) — Server in Frankfurt
-- **Tailwind CSS** + **Framer Motion** + **Lenis** (Smooth Scroll)
-- **TypeScript** end-to-end
-- **Turborepo** (Monorepo: `apps/web`, `apps/mobile`, `packages/*`)
+Auch wenn der Quellcode nicht öffentlich liegt, dokumentieren wir die rechtliche
+Position für mögliche zukünftige Einsicht: Nava verwendet die
+[**PolyForm Noncommercial 1.0.0**](./LICENSE) — eine Source-available-Lizenz.
 
----
+### ✅ Was erlaubt ist
 
-## Lizenz: Source-available, **nicht** MIT
+- Eigene Nutzung der App auf [nava.app](https://nava.app)
+- Bugs melden, Feature-Wünsche posten
+- Über nava schreiben, verlinken, weiterempfehlen
 
-Nava ist **nicht** klassisch Open Source. Wir benutzen die
-[**PolyForm Noncommercial 1.0.0**](./LICENSE) — eine
-Source-available-Lizenz mit folgendem Modell:
+### ❌ Was nicht erlaubt ist
 
-### ✅ Was du darfst
-
-- Den Quellcode lesen, prüfen, studieren
-- Nava für deine eigene WG selbst hosten
-- Forken für Forschung, Bildung, gemeinnützige Zwecke
-- Bugs melden, Pull Requests einreichen
-
-### ❌ Was du nicht darfst
-
-- Nava 1:1 klonen und als kommerzielles Produkt betreiben
-- Den Code in einem zahlungspflichtigen Service verwenden
-- Eine kommerzielle Konkurrenz-WG-App auf Basis dieses Codes anbieten
+- Nava klonen und als kommerzielles Produkt anbieten
+- Nava-Branding in eigenen Produkten verwenden
+- Den Code (auch falls dir Teile zugänglich sind) für eine Konkurrenz-WG-App nutzen
 
 **Warum keine MIT-Lizenz?** Wir bauen nava nebenbei, ohne Investor.
 Eine freie Lizenz würde es trivial machen, den Code zu kopieren und
-als „Premium" zu vermarkten. Source-available bedeutet: Transparenz für
-Nutzer, Schutz für die Maintainer.
+als „Premium" zu vermarkten. Die Source-available-Lizenz schützt das Projekt
+vor reinen Klon-Versuchen, ohne Nutzern Versprechen zu brechen.
 
-Für kommerzielle Lizenzanfragen: [Issue eröffnen](https://github.com/Abuarchiv/nava/issues/new).
+Für Lizenz- oder Kooperationsanfragen: [Issue eröffnen](https://github.com/Abuarchiv/nava/issues/new).
 
 ---
 
-## Selbst hosten
+## App ausprobieren
 
-> Hinweis: Self-Hosting ist erlaubt für nicht-kommerzielle Zwecke (eure eigene WG, ein Verein, ein Studentenwohnheim).
+> Du brauchst keinen Code zu installieren. Nava läuft als Web-App.
 
-```bash
-# Clone
-git clone https://github.com/Abuarchiv/nava.git
-cd nava
+1. Geh auf **[nava.app](https://nava.app)**
+2. WG erstellen (E-Mail eingeben — kein Passwort, Magic-Link)
+3. Mitbewohner einladen (Link teilen)
+4. Loslegen
 
-# Install (pnpm)
-pnpm install
+Setup-Zeit: unter einer Minute. Keine Kreditkarte. Kein Onboarding-Funnel.
 
-# Setup
-cp apps/web/.env.example apps/web/.env.local
-# Fülle Supabase-Keys ein
-
-# Run
-pnpm dev
-```
-
-Voraussetzungen:
-
-- Node.js 20+
-- pnpm 9+
-- Supabase-Projekt (kostenloses Tier reicht)
+Mobile? Nava ist eine Progressive Web App — über den Share-Button im Browser
+zum Home-Bildschirm hinzufügen, fühlt sich an wie eine native App.
 
 ---
 
@@ -122,24 +107,12 @@ Voraussetzungen:
 - [x] Rotierender Putzplan mit Urlaubs-Übersprung
 - [x] Geteilte Einkaufsliste, automatische Auslagen-Verbuchung
 - [x] WG-Pinnwand mit Lese-Bestätigungen
-- [ ] Mobile App (PWA → installierbar auf iOS/Android)
+- [x] PWA — installierbar auf iOS und Android
 - [ ] Mehrsprachigkeit (EN, FR)
 - [ ] iCal-Export für Putzplan
 - [ ] Optional: WhatsApp-/Telegram-Bot
 
----
-
-## Mitwirken
-
-Pull Requests sind willkommen — vor allem für:
-
-- Bugfixes
-- Übersetzungen
-- Barrierefreiheit
-- DSGVO-/Datenschutz-Verbesserungen
-
-Bitte beachte die [Lizenz](./LICENSE) — Beiträge werden unter denselben Bedingungen
-aufgenommen.
+Status-Updates: [Discussions ↗](https://github.com/Abuarchiv/nava/discussions)
 
 ---
 
@@ -155,10 +128,25 @@ Vollständige Datenschutzerklärung: [nava.app/datenschutz](https://nava.app/dat
 
 ---
 
-## Community
+## Mitwirken
 
-- **Issues:** [github.com/Abuarchiv/nava/issues](https://github.com/Abuarchiv/nava/issues)
-- **Discussions:** [github.com/Abuarchiv/nava/discussions](https://github.com/Abuarchiv/nava/discussions)
+Auch wenn der Code privat ist, freuen wir uns über:
+
+- 🐛 **Bug-Reports** — [Issue erstellen](https://github.com/Abuarchiv/nava/issues/new)
+- 💡 **Feature-Wünsche** — [Discussion eröffnen](https://github.com/Abuarchiv/nava/discussions)
+- 📣 **Empfehlungen** — Repo starren, an WG-Bewohner weiterleiten
+- 🌐 **Übersetzungen** — wenn EN/FR/IT live ist, Hilfe willkommen
+
+---
+
+## Verantwortlich
+
+Vier Studenten aus Berlin, Köln und Leipzig. Wir haben nava für unsere eigenen
+WGs gebaut — und stellen es nun zur Verfügung. Server-Kosten ~12 €/Monat,
+das tragen wir selbst.
+
+Kontakt: [Issues ↗](https://github.com/Abuarchiv/nava/issues) ·
+Volles Impressum: [nava.app/impressum](https://nava.app/impressum)
 
 ---
 
@@ -166,6 +154,6 @@ Vollständige Datenschutzerklärung: [nava.app/datenschutz](https://nava.app/dat
 
 **Vier Studenten, ein Server in Frankfurt, keine Investoren.**
 
-© 2026 nava. PolyForm Noncommercial 1.0.0.
+© 2026 nava. Source-available unter PolyForm Noncommercial 1.0.0.
 
 </div>
